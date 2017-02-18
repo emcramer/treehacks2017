@@ -17,17 +17,21 @@
         white-space: pre;
         text-overflow: ellipsis;
         overflow: hidden;
-        max-width: 400px;
+        max-width: 800px;
       }
     </style>
     <script src="jquery-3.1.1.min.js"></script>
-    <script src="popup-3.js"></script>
+    <script src="nlp-js.js"></script>
   </head>
   <body>
-    <div id="stauts"></div>
-	<p>Do you want to evaluate page contents?</p>
-    <button name="yes">Yes</button>
-    <button name="no">No</button>
+  	<div id="buttons">
+		<p>Do you want to evaluate page contents?</p>
+	    <button name="yes">Yes</button>
+	    <button name="no">No</button>
+    </div>
+	<div id="status">
+    	<!-- Data Posted Here -->
+    </div>
   </body>
 </html>
 
