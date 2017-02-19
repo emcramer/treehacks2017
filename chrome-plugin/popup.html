@@ -13,25 +13,27 @@
         font-size: 100%;
       }
       #status {
-        /* avoid an excessively wide status text */
         white-space: pre;
         text-overflow: ellipsis;
         overflow: hidden;
-        max-width: 1000px;
+        max-width: 100%;
+        max-height: 10%;
       }
     </style>
+    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="header-js.js"></script>
-    <script type="text/javascript" src="node_modules/natural"></script>
+    <script type="text/javascript" src="natural.js"></script>
+    <script type="text/javascript" src="d3.v4.js"></script>
+    <script type="text/javascript" src="googlecharts.js"></script>
     </head>
   <body>
+  <div id="wrapper">
   	<div id="buttons">
-		<p>Do you want to evaluate page contents?</p>
+		<p id="question">Do you want to evaluate page contents?</p>
 	    <button id="yes">Yes</button>
 	    <button id="no">No</button>
     </div>
-	<div id="status">
-    	<!-- Data Posted Here -->
-    </div>
+   </div>
     <script type="text/javascript" src="nlp-js.js"></script>
   </body>
 </html>
