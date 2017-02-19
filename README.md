@@ -13,7 +13,7 @@ Grain of Salt is an attempt to assist others in maintaining this awareness. The 
 (Fill in)
 
 ## Native Bayes Classifier
-A Native Bayes Classifier is a classification Machine learning problem. Given a feature set of vectors $x$, it computes the probability of the instance belonging to a particular class (out of a set of two or more classes) by applying Bayes' theorem:
+A Native Bayes Classifier is a classification Machine learning problem. Given a feature set of vectors $x$, it computes the probability of the instance belonging to a particular class (out of a set of two or more classes) by applying Bayes' theorem, and then assigns the instance to the class with the highest probability.
 
 
 
