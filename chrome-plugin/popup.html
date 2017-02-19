@@ -20,14 +20,14 @@
         max-width: 800px;
       }
     </style>
-    <script src="jquery-3.1.1.min.js"></script>
-    <script src="nlp-js.js"></script>
+    <!--<script type="text/javascript" src="jquery-3.1.1.min.js"></script>-->
+    <script type="text/javascript" src="nlp-js.js"></script>
   </head>
   <body>
   	<div id="buttons">
 		<p>Do you want to evaluate page contents?</p>
-	    <button name="yes">Yes</button>
-	    <button name="no">No</button>
+	    <button id="yes" onClick="loadDoc">Yes</button>
+	    <button id="no">No</button>
     </div>
 	<div id="status">
     	<!-- Data Posted Here -->
