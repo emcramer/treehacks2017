@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In a world with a much higher quantity of media, it is much harder to one to control what content they view or don't view. Yet that awareness and control is critical when much of our media is embedded with subtle political biases. Without it, 
+Grain of Salt is a Chrome plug-in that scans news articles to determine their political leaning.
 
 
 ## Welcome to GitHub Pages
