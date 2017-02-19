@@ -17,21 +17,22 @@
         white-space: pre;
         text-overflow: ellipsis;
         overflow: hidden;
-        max-width: 800px;
+        max-width: 1000px;
       }
     </style>
-    <!--<script type="text/javascript" src="jquery-3.1.1.min.js"></script>-->
-    <script type="text/javascript" src="nlp-js.js"></script>
-  </head>
+    <script type="text/javascript" src="header-js.js"></script>
+    <script type="text/javascript" src="node_modules/natural"></script>
+    </head>
   <body>
   	<div id="buttons">
 		<p>Do you want to evaluate page contents?</p>
-	    <button id="yes" onClick="loadDoc">Yes</button>
+	    <button id="yes">Yes</button>
 	    <button id="no">No</button>
     </div>
 	<div id="status">
     	<!-- Data Posted Here -->
     </div>
+    <script type="text/javascript" src="nlp-js.js"></script>
   </body>
 </html>
 
