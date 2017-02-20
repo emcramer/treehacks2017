@@ -3,17 +3,45 @@
 var api_url = "https://api.diffbot.com/v3/article";
 var api_token = "27a6981b4d8208468d629e9bc14f5f46";
 var theUrl = api_url + "?token=" + api_token + "&url=";
-
 var post_url = "https://treehacks-2017.appspot.com";
+// bayes classifier for NLP
+var classifier;
+$.get("classifier.json", function(json) {
+    classifier = json;
+    console.log(json); // this will show the info it in firebug console
+})
 
 // add event listener for yes button
 var yesButton = document.getElementById("yes");
 var noButton = document.getElementById("no");
 
+function textToFeatures(observation) {
+    var features = [];
+
+    if(typeof observation === 'string')
+	observation = tokenizeAndStem(observation);
+
+    for(var feature in this.features) {
+        if(observation.indexOf(feature) > -1)
+            features.push(1);
+        else
+            features.push(0);
+    }
+
+    return features;
+}
+
 noButton.addEventListener("click", function closeWindow(){
 	//close the pop-up
 	window.close();
 });
+
+function tokenizeAndStem(text) {
+        var stemmedTokens = [];
+        var lowercaseText = text.toLowerCase();
+        var tokens = lowercaseText.split();
+        return stemmedTokens;
+    };
 
 yesButton.addEventListener("click", function loadDoc() {
 theUrl += page_url; //create the url for the api request
@@ -81,6 +109,10 @@ theUrl += page_url; //create the url for the api request
 			var NGrams = natural.NGrams;
 			var five_grams = NGrams.ngrams(article_text, 5);
 			console.log(five_grams);
+
+			var values = textToFeatures(article_text);
+			console.log(values);
+
 		}
 
 		$.get({
@@ -100,9 +132,6 @@ theUrl += page_url; //create the url for the api request
 				
 			}
 		});
-
-
-
 
 
       console.log("Success!");
